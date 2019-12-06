@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PlayerList from './Components/PlayerList.js'
+import { useSpecialTheme } from './Hooks/useSpecialTheme.js'
+import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [specialTheme, setSpecialTheme] = useSpecialTheme(false)
+
+    const handleClick = () => {
+        console.log('hi')
+        setSpecialTheme(!specialTheme)
+    }
+
+    return (
+        <div className="App">
+            <button onClick={handleClick} className="special-button">
+                Activate Special Theme
+            </button>
+            <PlayerList />
+        </div>
+    )
 }
 
-export default App;
+export default App
