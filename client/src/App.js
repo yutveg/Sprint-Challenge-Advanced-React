@@ -4,12 +4,10 @@ import { useSpecialTheme } from './Hooks/useSpecialTheme.js'
 import './App.css'
 
 function App() {
-    const [specialTheme, setSpecialTheme] = useSpecialTheme(
-        'specialTheme',
-        false
-    )
+    const [specialTheme, setSpecialTheme] = useSpecialTheme(false)
 
     const handleClick = () => {
+        console.log('hi')
         setSpecialTheme(!specialTheme)
     }
 

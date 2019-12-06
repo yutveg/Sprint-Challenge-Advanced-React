@@ -20,7 +20,7 @@ class PlayerList extends React.Component {
 
     render() {
         return (
-            <div data-test-id="playerlist" className="playerlist">
+            <div data-testid="playerlist" className="playerlist">
                 {this.state.players.map(item => (
                     <div key={item.id} className="player-card">
                         <h1>Name: {item.name}</h1>

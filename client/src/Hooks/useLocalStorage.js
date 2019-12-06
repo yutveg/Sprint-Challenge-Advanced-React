@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const useLocalStorage = (key, intialValue) => {
+export const useLocalStorage = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(() => {
         //Check if key exists in local storage
         if (window.localStorage.getItem(key)) {
